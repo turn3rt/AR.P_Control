@@ -13,6 +13,8 @@
 		B3D59BFA23C560F7001B7EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D59BF823C560F7001B7EAE /* Main.storyboard */; };
 		B3D59BFC23C560F7001B7EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D59BFB23C560F7001B7EAE /* Assets.xcassets */; };
 		B3D59BFF23C560F7001B7EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D59BFD23C560F7001B7EAE /* LaunchScreen.storyboard */; };
+		B3D59C0E23C67320001B7EAE /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D59C0C23C67320001B7EAE /* FocusSquareSegment.swift */; };
+		B3D59C0F23C67320001B7EAE /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D59C0D23C67320001B7EAE /* FocusSquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B3D59BFB23C560F7001B7EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D59BFE23C560F7001B7EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3D59C0023C560F8001B7EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D59C0C23C67320001B7EAE /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		B3D59C0D23C67320001B7EAE /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +63,22 @@
 				B3D59BF223C560F6001B7EAE /* AppDelegate.swift */,
 				B3D59BF423C560F7001B7EAE /* art.scnassets */,
 				B3D59BF623C560F7001B7EAE /* ViewController.swift */,
+				B3D59C0B23C67320001B7EAE /* FocusSquare */,
 				B3D59BF823C560F7001B7EAE /* Main.storyboard */,
 				B3D59BFB23C560F7001B7EAE /* Assets.xcassets */,
 				B3D59BFD23C560F7001B7EAE /* LaunchScreen.storyboard */,
 				B3D59C0023C560F8001B7EAE /* Info.plist */,
 			);
 			path = "AR.P Control";
+			sourceTree = "<group>";
+		};
+		B3D59C0B23C67320001B7EAE /* FocusSquare */ = {
+			isa = PBXGroup;
+			children = (
+				B3D59C0C23C67320001B7EAE /* FocusSquareSegment.swift */,
+				B3D59C0D23C67320001B7EAE /* FocusSquare.swift */,
+			);
+			path = FocusSquare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D59BF723C560F7001B7EAE /* ViewController.swift in Sources */,
+				B3D59C0F23C67320001B7EAE /* FocusSquare.swift in Sources */,
+				B3D59C0E23C67320001B7EAE /* FocusSquareSegment.swift in Sources */,
 				B3D59BF323C560F6001B7EAE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

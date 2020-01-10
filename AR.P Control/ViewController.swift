@@ -156,6 +156,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
         DispatchQueue.main.async {
            // if !self.hasShownTrunk {
                 self.updateFocusSquare()
+            print(self.focusSquare.lastPosition)
             //}
         }
     }

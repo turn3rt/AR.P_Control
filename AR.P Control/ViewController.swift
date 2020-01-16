@@ -26,6 +26,15 @@ class ViewController: UIViewController {
     
     @IBOutlet var sceneView: ARSCNView!
     
+    // MARK: - IB connections
+    @IBAction func sceenTap(_ sender: UITapGestureRecognizer) {
+        if focusSquare.lastPosition != nil {
+            print("Starting Game Session")
+            startGameSession()
+            focusSquare.hide()
+            //bottomButton.isHidden = true
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +50,7 @@ class ViewController: UIViewController {
         // Set the scene to the view
         sceneView.scene = scene
         
+        // Configure Plane Detection
         setupCoachingOverlay()
         setActivatesAutomatically()
         setGoal()
@@ -51,6 +61,8 @@ class ViewController: UIViewController {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
+        
+        sceneView.autoenablesDefaultLighting = true
 
         // Run the view's session
         sceneView.session.run(configuration)
@@ -114,7 +126,31 @@ class ViewController: UIViewController {
            }
        }
     
+    
+    // MARK: - Internal funcs
+    func startGameSession() {
+        createTube(atPos: focusSquare.lastPosition!, inRadius: 0.2, outRadius: 0.25, height: 1.0)
+    }
+    
+    
+    
+    func createTube(atPos: simd_float3, inRadius: CGFloat, outRadius: CGFloat, height: CGFloat) {
+        let tubeNode = SCNNode()
+        
+        let tubeMesh = SCNTube(innerRadius: inRadius, outerRadius: outRadius, height: height)
+        tubeNode.geometry = tubeMesh
+        tubeNode.position = SCNVector3(atPos)
+        
+        
+        let material = SCNMaterial()
+        // material.diffuse.contents = UIColor.white
+        material.lightingModel = .blinn
+        tubeMesh.firstMaterial = material
+        
+        sceneView.scene.rootNode.addChildNode(tubeNode)
+    }
 }
+
 
 
 
